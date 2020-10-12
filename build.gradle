@@ -1,3 +1,5 @@
+apply from: 'config/sonarqube.gradle'
+
 allprojects {
 
     repositories {
@@ -18,8 +20,9 @@ buildscript {
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:$versions.gradle"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
+        classpath gradlePlugins.gradle
+        classpath gradlePlugins.kotlin
+        classpath gradlePlugins.sonarqube
     }
 }
 

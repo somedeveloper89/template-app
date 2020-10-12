@@ -1,6 +1,13 @@
 ext.versions = [
-        gradle  : '4.0.2',
-        kotlin  : "1.4.10",
+        gradle      : '4.0.2',
+        kotlin      : "1.4.10",
+        sonarqube   : "2.7",
+]
+
+ext.gradlePlugins = [
+        gradle   : "com.android.tools.build:gradle:$versions.gradle",
+        kotlin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        sonarqube: "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$versions.sonarqube",
 ]
 
 ext.libraries = [

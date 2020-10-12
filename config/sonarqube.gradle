@@ -1,0 +1,7 @@
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property "sonar.tests", "src/test/kotlin"
+    }
+}
