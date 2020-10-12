@@ -10,7 +10,7 @@ workflows:
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
-    run:
-      name: Run Sonarqube
-      command: ./gradlew sonarqube
+      one:
+        - welcome/run
+      two:
+        - run: ./gradlew sonarqube
