@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: '../config/android-application.gradle'
+
+android {
+
+    buildTypes {
+
+        debug {
+            debuggable true
+            testCoverageEnabled false
+        }
+
+        release {
+            debuggable false
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+dependencies {
+
+    implementation(libraries.kotlin) {
+        exclude group: 'org.jetbrains'
+    }
+}

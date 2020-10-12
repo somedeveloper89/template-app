@@ -1,0 +1,8 @@
+ext.versions = [
+        gradle  : '4.0.2',
+        kotlin  : "1.4.10",
+]
+
+ext.libraries = [
+        kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+]

@@ -1,0 +1,2 @@
+-dontnote kotlin.internal.**
+-dontnote kotlin.reflect.jvm.internal.**

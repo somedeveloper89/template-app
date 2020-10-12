@@ -1,0 +1,51 @@
+android {
+
+    buildToolsVersion "29.0.2"
+    compileSdkVersion 29
+
+    compileOptions {
+        encoding "UTF-8"
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId 'com.example.modularapp'
+        targetSdkVersion 29
+        minSdkVersion 21
+        versionCode 1
+        versionName "0.1"
+        multiDexEnabled false
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dexOptions {
+        dexInProcess true
+        javaMaxHeapSize "8g"
+        jumboMode true
+        maxProcessCount 8
+        preDexLibraries true
+        threadCount 8
+    }
+
+    lintOptions {
+        abortOnError true
+        checkAllWarnings true
+        checkReleaseBuilds false
+        ignoreWarnings false
+        quiet true
+    }
+
+    // To remove jetbrains annotations dex error
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains', module: 'annotations'
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+        test.java.srcDirs += 'src/test/kotlin'
+        androidTest.java.srcDirs += 'src/androidTest/kotlin'
+    }
+}
