@@ -13,7 +13,7 @@ jobs:
     # Beneath working_directory, we can specify container images under a docker key.
     docker:
       # We use the CircleCI provided Android image with the api-29-alpha tag.
-      - image: circleci/android:api-29-alpha
+      - image: circleci/android:api-29
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
