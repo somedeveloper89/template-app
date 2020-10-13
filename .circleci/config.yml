@@ -46,12 +46,7 @@ jobs:
       # We upload the test metadata (XML) for CircleCI to process.
       - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: app/build/test-results
-      # Test if sonarqube works
-      - run:
-          name: Install Sonarqube scanner
-          command: |
-            wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-4.2.0.1873.zip
-            unzip sonar-scanner-cli-4.2.0.1873.zip
-      - run:
-          name: Sonarqube analysis
-          command: ./gradlew sonarqube
+      # Test if sonarqube works (probably needs credentials for paid version)
+#      - run:
+#          name: Sonarqube analysis
+#          command: ./gradlew sonarqube

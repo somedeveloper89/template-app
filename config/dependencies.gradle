@@ -1,7 +1,7 @@
 ext.versions = [
         gradle      : '4.0.2',
         kotlin      : "1.4.10",
-        sonarqube   : "2.7",
+        sonarqube   : "3.0",
 ]
 
 ext.gradlePlugins = [
