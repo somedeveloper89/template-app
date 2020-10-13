@@ -16,3 +16,6 @@ jobs:
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
+      - run:
+          name: Sonarqube
+          command: ./gradlew sonarqube
