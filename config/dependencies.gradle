@@ -2,14 +2,20 @@ ext.versions = [
         gradle      : '4.0.2',
         kotlin      : "1.4.10",
         sonarqube   : "3.0",
+        hilt        : "2.28-alpha",
+        appCompat   : "1.2.0"
 ]
 
 ext.gradlePlugins = [
-        gradle   : "com.android.tools.build:gradle:$versions.gradle",
-        kotlin   : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
-        sonarqube: "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$versions.sonarqube",
+        gradle              : "com.android.tools.build:gradle:$versions.gradle",
+        kotlin              : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        sonarqube           : "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$versions.sonarqube",
+        hilt                : "com.google.dagger:hilt-android-gradle-plugin:$versions.hilt",
 ]
 
 ext.libraries = [
-        kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        kotlin                      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        daggerHiltAndroid           : "com.google.dagger:hilt-android:$versions.hilt",
+        daggerHiltAndroidCompiler   : "com.google.dagger:hilt-android-compiler:$versions.hilt",
+        appCompat                   : "androidx.appcompat:appcompat:$versions.appCompat"
 ]

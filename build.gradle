@@ -23,6 +23,7 @@ buildscript {
         classpath gradlePlugins.gradle
         classpath gradlePlugins.kotlin
         classpath gradlePlugins.sonarqube
+        classpath gradlePlugins.hilt
     }
 }
 

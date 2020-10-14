@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'dagger.hilt.android.plugin'
 
 apply from: '../config/android-application.gradle'
 
@@ -26,4 +28,7 @@ dependencies {
     implementation(libraries.kotlin) {
         exclude group: 'org.jetbrains'
     }
+    implementation  libraries.daggerHiltAndroid
+    implementation  libraries.appCompat
+    kapt            libraries.daggerHiltAndroidCompiler
 }
