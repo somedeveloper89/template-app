@@ -1,6 +1,7 @@
 package com.example.modularapp
 
 import androidx.appcompat.app.AppCompatActivity
+import com.example.modularapp.viewmodel.VetViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 /**

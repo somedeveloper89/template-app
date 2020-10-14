@@ -1,21 +1,33 @@
 ext.versions = [
-        gradle      : '4.0.2',
-        kotlin      : "1.4.10",
-        sonarqube   : "3.0",
-        hilt        : "2.28-alpha",
-        appCompat   : "1.2.0"
+        gradle                                      : '4.1.0',
+        kotlin                                      : "1.4.10",
+        sonarqube                                   : "3.0",
+        hilt                                        : "2.28-alpha",
+        hiltLifecycle                               : "1.0.0-alpha01",
+        appCompat                                   : "1.2.0",
+        coreKtxVersion                              : "1.3.2",
+        lifecycleRuntimeKtxVersion                  : "2.2.0",
+        fragmentKtxVersion                          : "1.2.5"
 ]
 
 ext.gradlePlugins = [
-        gradle              : "com.android.tools.build:gradle:$versions.gradle",
-        kotlin              : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
-        sonarqube           : "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$versions.sonarqube",
-        hilt                : "com.google.dagger:hilt-android-gradle-plugin:$versions.hilt",
+        gradle                           : "com.android.tools.build:gradle:$versions.gradle",
+        kotlin                           : "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin",
+        sonarqube                        : "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:$versions.sonarqube",
+        hilt                             : "com.google.dagger:hilt-android-gradle-plugin:$versions.hilt",
 ]
 
 ext.libraries = [
-        kotlin                      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
-        daggerHiltAndroid           : "com.google.dagger:hilt-android:$versions.hilt",
-        daggerHiltAndroidCompiler   : "com.google.dagger:hilt-android-compiler:$versions.hilt",
-        appCompat                   : "androidx.appcompat:appcompat:$versions.appCompat"
+        kotlin                          : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        daggerHiltAndroid               : "com.google.dagger:hilt-android:$versions.hilt",
+        daggerHiltAndroidKapt           : "com.google.dagger:hilt-android-compiler:$versions.hilt",
+        daggerHiltKapt                  : "androidx.hilt:hilt-compiler:$versions.hiltLifecycle",
+        daggerHiltLifecycleViewModel    : "androidx.hilt:hilt-lifecycle-viewmodel:$versions.hiltLifecycle",
+        appCompat                       : "androidx.appcompat:appcompat:$versions.appCompat",
+        coreKtx                         : "androidx.core:core-ktx:$versions.coreKtxVersion",
+        lifecycleRuntimeKtx             : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycleRuntimeKtxVersion",
+        lifecycleLiveDataKitx           : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleRuntimeKtxVersion",
+        lifecycleReactiveStreamsKtx     : "androidx.lifecycle:lifecycle-reactivestreams-ktx:$versions.lifecycleRuntimeKtxVersion",
+        lifecycleViewModelKtx           : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleRuntimeKtxVersion",
+        fragmentKtx                     : "androidx.fragment:fragment-ktx:$versions.fragmentKtxVersion"
 ]

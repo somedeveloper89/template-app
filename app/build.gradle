@@ -30,5 +30,13 @@ dependencies {
     }
     implementation  libraries.daggerHiltAndroid
     implementation  libraries.appCompat
-    kapt            libraries.daggerHiltAndroidCompiler
+    kapt            libraries.daggerHiltAndroidKapt
+    kapt            libraries.daggerHiltKapt
+    implementation  libraries.daggerHiltLifecycleViewModel
+    implementation  libraries.coreKtx
+    implementation  libraries.fragmentKtx
+    implementation  libraries.lifecycleRuntimeKtx
+    implementation  libraries.lifecycleLiveDataKitx
+    implementation  libraries.lifecycleReactiveStreamsKtx
+    implementation  libraries.lifecycleViewModelKtx
 }
